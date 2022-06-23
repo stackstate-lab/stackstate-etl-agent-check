@@ -1,0 +1,14 @@
+/.idea/
+/.venv/
+/.agent/
+/build/
+/dist/
+
+_pycache__/
+*.py[cod]
+*$py.class
+
+.python-version
+.mypy_cache/
+
+/.env
