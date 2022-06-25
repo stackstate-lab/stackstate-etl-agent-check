@@ -6,6 +6,17 @@ templates.
 
 See [StackState ETL documentation](https://stackstate-lab.github.io/stackstate-etl/) for more information.
 
+## Installation
+
+From the StackState Agent 2 linux machine, run
+
+```bash 
+curl -L https://github.com/stackstate-lab/stackstate-etl-agent-check/releases/download/v0.1.0/stackstate-etl-agent-check-py27-0.1.0.tar.gz -o stackstate-etl-agent-check.tar.gz
+tar -xvf stackstate-etl-agent-check.tar.gz
+./install.sh
+```
+
+
 ## Development
 
 StackState ETL Agent is developed in Python 3, and is transpiled to Python 2.7 during build.
