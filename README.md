@@ -1,5 +1,3 @@
 # StackState ETL Agent Check
 
-StackState ETL Agent check makes data extract, transform and load simpler by using low-code yaml templates.
-
-
+Exposes [StackState ETL framework](https://github.com/stackstate-lab/stackstate-etl) as a custom agent check. 
