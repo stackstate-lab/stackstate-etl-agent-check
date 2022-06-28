@@ -15,6 +15,7 @@ class AgentProcessor:
         self.log = agent_check.log
         self.instance = instance
         self.factory = TopologyFactory()
+        self.factory.log = self.log
 
     def process(self):
         self._process_etl()
