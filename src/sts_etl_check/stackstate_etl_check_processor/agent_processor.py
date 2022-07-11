@@ -19,7 +19,6 @@ class AgentProcessor:
 
     def process(self):
         self._process_etl()
-        self.factory.resolve_relations()
         self._publish()
 
     def _process_etl(self):

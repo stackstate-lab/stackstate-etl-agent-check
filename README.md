@@ -8,7 +8,9 @@ See [StackState ETL documentation](https://stackstate-lab.github.io/stackstate-e
 
 ## Installation
 
-From the StackState Agent 2 linux machine, run
+From the StackState Agent 2 linux machine.
+
+### As an Agent Check on StackState Agent
 
 ```bash 
 curl -L https://github.com/stackstate-lab/stackstate-etl-agent-check/releases/download/v0.1.0/sts_etl_check-0.1.0.zip -o sts_etl_check.zip
@@ -16,6 +18,12 @@ tar -xvf sts_etl_check.zip
 ./install.sh
 ```
 
+### As a Python package on StackState Agent
+
+```bash
+
+sudo -H -u stackstate-agent bash -c "/opt/stackstate-agent/embedded/bin/pip install https://github.com/stackstate-lab/stackstate-etl-agent-check/releases/download/v0.1.0/stackstate-etl-agent-check-py27-0.1.0.tar.gz
+```
 
 ## Development
 
