@@ -14,7 +14,7 @@ class AgentProcessor:
         self.agent_check = agent_check
         self.log = agent_check.log
         self.instance = instance
-        self.factory = TopologyFactory()
+        self.factory = TopologyFactory(instance.factory_mode)
         self.factory.log = self.log
 
     def process(self):
