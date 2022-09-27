@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: stackstate-etl-agent-check
+Version: __version__
+Summary: StackState Extract-Transform-Load Agent Check for 4T data ingestion
+Author: Ravan Naidoo
+Author-email: rnaidoo@stackstate.com
+Requires-Python: >=2.7, <=2.8
+Classifier: Programming Language :: Python :: 2

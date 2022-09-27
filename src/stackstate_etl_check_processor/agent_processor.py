@@ -5,8 +5,7 @@ from stackstate_checks.base import AgentCheck, Health
 from stackstate_etl.etl.etl_driver import ETLDriver
 from stackstate_etl.model.factory import TopologyFactory
 from stackstate_etl.model.instance import InstanceInfo
-from stackstate_etl.model.stackstate import (Component, HealthCheckState,
-                                             Relation)
+from stackstate_etl.model.stackstate import Component, HealthCheckState, Relation
 
 
 class AgentProcessor:
@@ -27,7 +26,6 @@ class AgentProcessor:
 
     def _publish(self):
         self.log.info(f"Publishing '{len(self.factory.components.values())}' components")
-        self.agent_check.start_snapshot()
         components: List[Component] = self.factory.components.values()
         for c in components:
             c.properties.dedup_labels()
@@ -42,7 +40,6 @@ class AgentProcessor:
                 self._encode_utf8(r.get_type()),
                 r.properties,
             )
-        self.agent_check.stop_snapshot()
         self._publish_health()
         self._publish_events()
         self._publish_metrics()

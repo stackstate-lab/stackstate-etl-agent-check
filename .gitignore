@@ -11,4 +11,5 @@ _pycache__/
 .python-version
 .mypy_cache/
 
-/.env
+/.pdm.toml
+/.sts.env

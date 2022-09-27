@@ -1,9 +1,14 @@
 from schematics.types import IntType, StringType
 from six import PY3
-from stackstate_checks.base import (AgentCheck, ConfigurationError,
-                                    HealthStream, HealthStreamUrn,
-                                    TopologyInstance)
+from stackstate_checks.base import (
+    AgentCheck,
+    ConfigurationError,
+    HealthStream,
+    HealthStreamUrn,
+    TopologyInstance,
+)
 from stackstate_etl.model.instance import InstanceInfo as EtlInstanceInfo
+
 from stackstate_etl_check_processor import AgentProcessor
 
 

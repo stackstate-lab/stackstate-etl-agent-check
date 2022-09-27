@@ -25,7 +25,7 @@ def test_check():
 
 
 def setup_test_instance() -> Dict[str, Any]:
-    with open("tests/resources/conf.d/etl.d/conf.yaml.example") as f:
+    with open("src/data/conf.d/etl.d/conf.yaml.example") as f:
         config = yaml.load(f)
         instance_dict = config["instances"][0]
     return instance_dict
