@@ -13,7 +13,7 @@ From the StackState Agent 2 linux machine.
 ### As an Agent Check on StackState Agent
 
 ```bash 
-curl -L https://github.com/stackstate-lab/stackstate-etl-agent-check/releases/download/v0.2.0/sts_etl_check-0.2.0.zip -o sts_etl_check.zip
+curl -L https://github.com/stackstate-lab/stackstate-etl-agent-check/releases/download/v0.2.1/sts_etl_check-0.2.1.zip -o sts_etl_check.zip
 tar -xvf sts_etl_check.zip
 ./install.sh
 ```
