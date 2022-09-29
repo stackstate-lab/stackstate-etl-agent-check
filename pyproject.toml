@@ -1,6 +1,6 @@
 [project]
 name = "stackstate-etl-agent-check"
-version = "0.2.0"
+version = "0.2.1"
 description = "StackState Extract-Transform-Load Agent Check for 4T data ingestion"
 authors = [
     {name = "Ravan Naidoo", email = "rnaidoo@stackstate.com"},

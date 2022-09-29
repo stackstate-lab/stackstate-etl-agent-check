@@ -1,6 +1,6 @@
 from typing import List
 
-from six import PY3
+from six import PY2, PY3
 from stackstate_checks.base import AgentCheck, Health
 from stackstate_etl.etl.etl_driver import ETLDriver
 from stackstate_etl.model.factory import TopologyFactory
@@ -26,6 +26,8 @@ class AgentProcessor:
 
     def _publish(self):
         self.log.info(f"Publishing '{len(self.factory.components.values())}' components")
+        if PY2:
+            self.agent_check.start_snapshot()
         components: List[Component] = self.factory.components.values()
         for c in components:
             c.properties.dedup_labels()
@@ -40,6 +42,8 @@ class AgentProcessor:
                 self._encode_utf8(r.get_type()),
                 r.properties,
             )
+        if PY2:
+            self.agent_check.stop_snapshot()
         self._publish_health()
         self._publish_events()
         self._publish_metrics()
